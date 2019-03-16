@@ -1,0 +1,37 @@
+program example2
+	declare x,y,z enddeclare
+
+	procedure pl(in x, inout z, inout v)
+		declare w enddeclare
+
+		procedure p2(inout z)
+			declare q enddeclare
+
+			procedure p3(inout a, inout b)
+				declare k enddeclare 
+					if v<>0 then
+						v:=z+b;
+						a:=1;
+					else
+						a:=v/b
+					endif;
+					k:=x
+			endprocedure
+
+			q:=y+x;
+			z:=q*x;
+			call p3(inout q, inout v)
+		endprocedure
+
+		if x<y then
+			w:=x+y
+		else
+			w:=x*y
+		endif;
+		call p2(inout z)
+	endprocedure
+
+	x:=1;
+	y:=2;
+	call p1(in x+y, inout z)
+endprogram
