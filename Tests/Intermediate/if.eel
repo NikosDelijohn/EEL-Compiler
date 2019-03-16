@@ -1,0 +1,27 @@
+/* + ----------------- [ If ] ----------------- + *
+ * + A classic "if" statement with a mandatory  + *
+ * + "else" part which can be left blank if     + *
+ * + needed.                                    + *
+ */
+
+program IfThenElse
+    
+    i:= 5;              // 0.i = 5
+    a:= 3;              // 1.a = 3        
+    b:= 2;              // 2.b = 2
+    if not [a>b] then   // 3.does not go in
+        print a
+    else                // 4.goes in
+        print b         // 5.prints 2
+    endif;
+    if [ i=5 ] then     // 6.goes in
+        print a;        // 7.prints 3
+        print b         // 8.prints 2
+    endif
+                        
+endprogram              // 9.halts
+
+ /* + ----------------------------------------------- + *   
+  * +       Copyright (C) Nick I. Deligiannis         + *
+  * + ----------------------------------------------- + *
+  */
