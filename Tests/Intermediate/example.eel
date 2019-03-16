@@ -1,0 +1,34 @@
+program example1
+	declare d,i,g,f enddeclare /* this is a comment */
+
+	procedure two(in g)
+		function three (in g, inout x, inout m)
+			declare k, j enddeclare // this is a comment line
+
+				k:=g;
+				j:=g;
+                input kak;
+				repeat
+					if k>i then
+						exit
+					endif;
+					j:=j*k;
+					k:=k+g;
+                    j:=3+g(in g, inout k)
+				endrepeat;
+				m:=j;
+				return m+1;
+				x:=7
+	    endfunction
+		i:=three (in +2, inout d, inout f)
+	endprocedure
+
+	function one (in g)
+		call two(in g)
+	endfunction
+
+	i:= 5;
+
+	g:= 1;
+	call one (in g) 
+endprogram
