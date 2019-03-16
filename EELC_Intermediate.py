@@ -1,7 +1,7 @@
 # + ------------------------- + #
 # Deligiannis Nikos 2681        #
 # UoI - Spring Semester 2018    #
-# 			CSE Department          #
+# 		CSE Department          #
 # Compilers MYY802 prof G.Manis #
 # Project: Compiler for EEL     #
 # + ------------------------- + #
@@ -48,9 +48,9 @@ class Quad:
 
 
 # + ------------------------------------ + #
-# 																				 #														
-#				Global Variables Declaration 		 	 #
-#																					 #
+# 										   #														
+#	  Global Variables Declaration 		   #
+#										   #
 # + ------------------------------------ + #
 
 token_dict = dict(alphaTK  = 1,  # Alpharithmetic - String (e.g Compiler)
@@ -128,9 +128,9 @@ global code         	# File pointer of the Source Code
 
 
 # + ------------------------------------ + #
-# 																				 #														
-#			Intermediate Code Related Funcs		 	 #
-#																					 #
+# 										   #														
+#	 Intermediate Code Related Funcs	   #
+#										   #
 # + ------------------------------------ + #
 
 # Shows (does not alter) the next label value (string format)
@@ -208,10 +208,10 @@ def back_patch(quadlist, res):
 				quad.res = res
 
 # + ------------------------------------ + #
-# 																				 #														
-#							Error Display & 						 #
-#				File Generation Related Funcs			 #
-#																					 #
+# 			                               #											
+#				Error Display & 		   #
+#		File Generation Related Funcs	   #
+#										   #
 # + ------------------------------------ + #
 
 #Used by everyone for errors
@@ -391,9 +391,9 @@ def generate_intermediate_ansi_c():
 
 
 # + ------------------------------------ + #
-# 																				 #														
-#			Lexical Analysis Related Funcs	 		 #
-#																					 #
+# 										   #														
+#	   Lexical Analysis Related Funcs      #
+#										   #
 # + ------------------------------------ + #
 
 def backtrack():
@@ -1987,9 +1987,9 @@ def OPTIONAL_SIGN():
   # e : Not using an add operator is acceptable.
 
 # + ------------------------------------ + #
-# 																				 #														
-#							Main Function			 	 				 #
-#																					 #
+# 										   #														
+#		      Main Function		           #
+#										   #
 # + ------------------------------------ + #
 
 def main():
