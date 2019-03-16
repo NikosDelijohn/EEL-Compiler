@@ -631,7 +631,7 @@ def lex():
       return token_dict["commaTK"]
 
   # -------------------[State 4 of the FSM]------------------- #
-  # -Symbol '/' found. Must see what follows!                  #
+  # -Symbol '/' found. Must see what follows.                  #
   # -Three possible scenarios to begin with                    #
   #     [A]: /*  Comment initializer                           #
   #     [B]: //  Comment until new line                        #
