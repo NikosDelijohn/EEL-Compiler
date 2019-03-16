@@ -1,0 +1,101 @@
+/* + ----------------- [ Test III ] ----------------- + *
+ * + In this we examine the statements which our      + *
+ * + our Language provides to the user. Its composed  + *
+ * + of three (3) functions:                          + *
+ * +    WhileAndRepeat:                               + *
+ * +        Is expected to return 2 when x is         + *
+ * +        a negative number.                        + *
+ * +    Switch:                                       + *
+ * +        According to the user input on b (main)   + *
+ * +        the functions either prints x or requests + *
+ * +        another one. Both are displayed back in   + *
+ * +        main since there is a print(f);           + *
+ * +    Forcase:                                      + *
+ * +        Is expected to print 1 2 3 3 1 and then   + *
+ * +        to print 0 (in main, it returns it).      + *
+ * + ------------------------------------------------ + *
+ */
+
+program statementstest
+
+    declare a,b,c,d,e,f enddeclare
+    
+    function WhileAndRepeat(in x)
+
+        while [ x <= 0 ]
+
+            x:= x + 1;
+
+        endwhile;
+
+        repeat 
+
+            x:= x + 1;
+
+            if [x=2] then
+
+                exit;
+
+            endif;
+
+        endrepeat; 
+        
+        return x;
+    
+    endfunction
+
+    function Switch(in x)
+
+        switch x
+
+            case 1 : print x;
+            case 0 : input x;
+       
+        endswitch;
+
+        return x;
+
+    endfunction
+
+    function Forcase(in x, in y, in d)
+
+        forcase
+
+            when x>1 : print 1; x:=x-1;
+
+            when y=1 : print 2; y:=y+1;
+            
+            when d<1 : print 3; d:=d+1;
+
+        endforcase;
+
+        return 0;
+
+    endfunction
+
+    a := -2;
+       
+    c :=  3;
+    d :=  1;
+    e := -1;
+    
+    f := WhileAndRepeat(in a);
+    print(f);
+    
+    input b;
+    f := Switch(in b);
+    print(f);
+    
+    f := Forcase(in c, in d, in e);
+    print(f);
+
+endprogram
+
+ /* + ----------------------------------------------- + *   
+  * +       Copyright (C) Nick I. Deligiannis         + *
+  * + ----------------------------------------------- + *
+  */
+        
+
+    
+    
