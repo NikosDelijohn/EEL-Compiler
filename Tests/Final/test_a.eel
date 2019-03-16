@@ -1,0 +1,59 @@
+/* + ----------------- [ Test I ] ----------------- + *
+ * + This piece of code, asks the user for inputs   + *
+ * + and then initiates a chained call of procedures+ *
+ * + incrementing the numbers given by the user.    + *
+ * + Note that the variable a  won't be affected    + *
+ * + due to the passing type to "increment1"        + *
+ * + which is 'CV'.                                 + *
+ * + ---------------------------------------------- + *
+ */
+
+program nestedprocs
+
+    declare a,b,c,d enddeclare
+
+    
+    procedure increment1(in a, inout b, inout c, inout d)
+
+        procedure increment2(inout c,inout d)
+
+            procedure increment3(inout d)
+
+                d:= d +1;
+            endprocedure
+
+            c := c + 1 ;
+            call increment3(inout d)
+                
+        endprocedure
+
+        a := a + 1;
+        b := b + 1;
+
+        call increment2(inout c, inout d)
+
+    endprocedure
+
+
+    input a;
+    input b;
+    input c;
+    input d;
+   
+    call increment1(in a, inout b,inout c, inout d);
+
+    print(a);
+    print(b);
+    print(c);
+    print(d);
+
+endprogram
+
+ /* + ----------------------------------------------- + *   
+  * +       Copyright (C) Nick I. Deligiannis         + *
+  * + ----------------------------------------------- + *
+  */
+
+
+
+    
